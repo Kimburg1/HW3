@@ -19,3 +19,86 @@ print(abndnt(22))
 r = abndnt(24)
 print(r)
 
+QUESTION 2
+def  identity(n):
+return n 
+def square(n):
+return n**2
+
+>>> a1 = adder(identity, square)		 
+>>> a1(4)					# x + x^2 = 4 + 4^2 = 20
+20
+>>> a2 = adder(a1, identity)     		
+>>> a2(4)	    # a1(4) + identity(4) = identity(4)+ square(4)+ identity(4)
+24						 
+>>> a2(5)
+35
+>>> a3 = adder(a1, a2)           # (x + x^2) + (x + x^2 + x)
+>>> a3(4)
+44
+"""
+def identity(n):
+return n
+
+def square(n):
+return n**2
+
+def adder(f1, f2):
+def f(x):
+return f1(x) + f2(x)
+return f
+
+a1 = adder(identity, square)
+print(a1(4))
+
+a2 = adder(a1, identity)
+print(a2(4))
+
+print(a2(5))
+a3 = adder(a1, a2)
+print(a3(4))
+
+
+QUESTION 3
+
+
+
+
+
+
+
+
+
+QUESTION 4
+
+
+
+
+
+
+
+
+
+
+QUESTION 5
+
+
+
+
+
+
+QUESTION 6
+
+
+
+
+
+
+
+QUESTION 7
+
+
+
+
+
+
